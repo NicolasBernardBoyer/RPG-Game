@@ -4912,6 +4912,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1072320669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2011693395 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7789143934337562197, guid: 83e18858c49fd3c44be98f444d4dd8c9, type: 3}
+  m_PrefabInstance: {fileID: 6304118198196000681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2028550125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416864, guid: d66c89601ce96d4419ce36a4dce3c401, type: 3}
@@ -5152,6 +5157,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3970119410137789049, guid: 83e18858c49fd3c44be98f444d4dd8c9, type: 3}
+      propertyPath: weaponPrefab
+      value: 
+      objectReference: {fileID: 8263430063915403900, guid: 43d2b2e490d0bfd44afda07498dddaf1, type: 3}
+    - target: {fileID: 3970119410137789049, guid: 83e18858c49fd3c44be98f444d4dd8c9, type: 3}
+      propertyPath: handTransform
+      value: 
+      objectReference: {fileID: 2011693395}
     - target: {fileID: 4046105382544116804, guid: 83e18858c49fd3c44be98f444d4dd8c9, type: 3}
       propertyPath: uniqueIdentifier
       value: a3eced81-93a2-4b10-8a25-6e01d5ea3584
@@ -5213,7 +5226,8 @@ PrefabInstance:
       value: Core
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4979305782176056298, guid: 83e18858c49fd3c44be98f444d4dd8c9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e18858c49fd3c44be98f444d4dd8c9, type: 3}
