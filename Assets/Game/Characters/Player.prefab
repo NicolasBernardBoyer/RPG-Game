@@ -25,9 +25,17 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5874024855076351299, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f5d64c8394e1fb48af5cf40d5e6b1b9, type: 2}
+    - target: {fileID: 5874024855076351299, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
       propertyPath: weaponPrefab
       value: 
       objectReference: {fileID: 8263430063915403900, guid: 43d2b2e490d0bfd44afda07498dddaf1, type: 3}
+    - target: {fileID: 5874024855076351299, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fdecc01603336f459351b204ef11573, type: 2}
     - target: {fileID: 5874024855076351299, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
       propertyPath: handTransform
       value: 
@@ -36,6 +44,14 @@ PrefabInstance:
       propertyPath: weaponOverride
       value: 
       objectReference: {fileID: 22100000, guid: 1e19969fde75cbb42be62e73a0e1837d, type: 2}
+    - target: {fileID: 5874024855076351299, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 1947970633706168955}
+    - target: {fileID: 5874024855076351299, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 1947970633706226195}
     - target: {fileID: 6302250316464024815, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
       propertyPath: m_LocalPosition.x
       value: -67.55
@@ -86,7 +102,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 907096206447270501, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6117920218421365994}
+    - targetCorrespondingSourceObject: {fileID: 907096206447270501, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2308873626991312935}
   m_SourcePrefab: {fileID: 100100000, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+--- !u!4 &1947970633706168955 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 757890933052426503, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+  m_PrefabInstance: {fileID: 1264391306447596412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1947970633706226195 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 757890933052500335, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
@@ -132,3 +156,30 @@ CapsuleCollider:
   m_Height: 1.8760257
   m_Direction: 1
   m_Center: {x: 0, y: -0.20085955, z: -0.025256157}
+--- !u!54 &2308873626991312935
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097166698175164697}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
