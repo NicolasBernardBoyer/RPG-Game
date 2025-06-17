@@ -1,9 +1,10 @@
 using UnityEngine;
 using RPG.Core;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
-    [RequireComponent(typeof(Health))]
+    [RequireComponent(typeof(EnemyHealthDisplay))]
     public class CombatTarget : MonoBehaviour 
     {
 

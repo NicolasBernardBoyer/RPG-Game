@@ -2,8 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using RPG.Combat;
 using RPG.Movement;
-using RPG.Core;
-using System;
+using RPG.Resources;
 
 namespace RPG.Control
 {

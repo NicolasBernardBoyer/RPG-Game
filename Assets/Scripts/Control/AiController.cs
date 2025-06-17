@@ -4,6 +4,7 @@ using RPG.Core;
 using static UnityEngine.GraphicsBuffer;
 using RPG.Movement;
 using System;
+using RPG.Resources;
 
 namespace RPG.Control
 {
