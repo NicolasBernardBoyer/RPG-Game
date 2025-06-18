@@ -8,7 +8,6 @@ namespace RPG.Combat
     public class EnemyHealthDisplay: MonoBehaviour
     {
         Fighter fighter;
-        [SerializeField] TMP_Text healthText = null;
 
         private void Awake()
         {
@@ -16,14 +15,16 @@ namespace RPG.Combat
         }
 
         private void Update()
-        {
-            if (fighter.GetTarget() == null)
+        { 
+            if (fighter.GetTarget() == null && GetComponent<TMP_Text>() != null)
             {
-                healthText.text = "N/A";
+                GetComponent<TMP_Text>().text = "N/A";
                 return;
+            } else if (GetComponent<TMP_Text>() != null)
+            {
+                Health health = fighter.GetTarget();
+                GetComponent<TMP_Text>().text = String.Format("{0:0.0}%", health.GetPercentage());
             }
-            Health health = fighter.GetTarget();
-            healthText.text = String.Format("{0:0.0}%", health.GetPercentage());
         }
     }
 }

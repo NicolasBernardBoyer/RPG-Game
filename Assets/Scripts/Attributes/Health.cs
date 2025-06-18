@@ -26,7 +26,6 @@ namespace RPG.Resources
         public void TakeDamage(GameObject instigator, float damage)
         {
             healthPoints = Mathf.Max(healthPoints - damage, 0);
-            print(healthPoints);
             if (healthPoints == 0)
             {
                 Die();
@@ -53,7 +52,8 @@ namespace RPG.Resources
             Experience experience = instigator.GetComponent<Experience>();
             if (experience = null) return;
 
-            experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
+            if (instigator != null)
+                experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
         }
 
         public object CaptureState()
