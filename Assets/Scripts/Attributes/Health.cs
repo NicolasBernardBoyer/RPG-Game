@@ -9,13 +9,35 @@ namespace RPG.Resources
 {
     public class Health: MonoBehaviour, ISaveable
     {
-        [SerializeField] float healthPoints = 100f;
+        [SerializeField] float regenerationPercentage = 70;
+
+        float healthPoints = -1f;
 
         bool alive = true;
 
         private void Start()
         {
-            healthPoints = GetComponent<BaseStats>().GetHealth();
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+            if (healthPoints < 0)
+            {
+                healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+            }
+        }
+
+        private void OnEnable()
+        {
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
+        }
+
+        private void RegenerateHealth()
+        {
+            float regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * (regenerationPercentage / 100);
+            healthPoints = Mathf.Max(regenHealthPoints, regenHealthPoints);
         }
 
         public bool IsAlive()
@@ -25,6 +47,8 @@ namespace RPG.Resources
 
         public void TakeDamage(GameObject instigator, float damage)
         {
+            print(gameObject.name + " took damage: " + damage);
+
             healthPoints = Mathf.Max(healthPoints - damage, 0);
             if (healthPoints == 0)
             {
@@ -33,9 +57,19 @@ namespace RPG.Resources
             }
         }
 
+        public float GetHealthPoints()
+        {
+            return healthPoints;
+        }
+
+        public float GetMaxHealthPoints()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
+
         public float GetPercentage()
         {
-            return 100 * (healthPoints / GetComponent<BaseStats>().GetHealth());
+            return 100 * (healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health));
         }
 
         private void Die()
@@ -50,10 +84,16 @@ namespace RPG.Resources
         private void AwardExperience(GameObject instigator)
         {
             Experience experience = instigator.GetComponent<Experience>();
-            if (experience = null) return;
 
-            if (instigator != null)
-                experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
+            if (experience != null)
+            {
+                experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
+                //Debug.Log("Awarded exp to Player");
+            } else
+            {
+                //Debug.Log("Experience is null");
+            }
+                
         }
 
         public object CaptureState()

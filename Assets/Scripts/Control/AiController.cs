@@ -28,13 +28,16 @@ namespace RPG.Control
         Vector3 guardPosition;
         int currentWaypointIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             fighter = GetComponent<Fighter>();
             health = GetComponent<Health>();
             player = GameObject.FindWithTag("Player");
             mover = GetComponent<Mover>();
+        }
 
+        private void Start()
+        {
             guardPosition = transform.position;
         }
 

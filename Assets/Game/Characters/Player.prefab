@@ -93,9 +93,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6399957491113497183, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: useModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399957491113497183, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
       propertyPath: characterClass
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6399957491113497183, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: levelUpParticleEffect
+      value: 
+      objectReference: {fileID: 5202388291119548186, guid: ffa821c3f31ce844aa9286056efea88f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
