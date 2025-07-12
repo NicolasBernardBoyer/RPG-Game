@@ -40,10 +40,10 @@ namespace RPG.SceneManagement
             DontDestroyOnLoad(gameObject);
 
             Fader fader = FindFirstObjectByType<Fader>();
+            SavingWrapper wrapper = FindFirstObjectByType<SavingWrapper>();
 
             yield return fader.FadeOut(fadeOutTime);
 
-            SavingWrapper wrapper = FindFirstObjectByType<SavingWrapper>();
             wrapper.Save();
 
             yield return SceneManager.LoadSceneAsync(sceneToLoad);

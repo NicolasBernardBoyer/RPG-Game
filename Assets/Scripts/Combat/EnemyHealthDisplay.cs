@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using TMPro;
-using RPG.Resources;
+using RPG.Attributes;
 
 namespace RPG.Combat
 {
