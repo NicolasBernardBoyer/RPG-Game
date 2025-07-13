@@ -2,13 +2,12 @@
 using RPG.Control;
 using System.Collections;
 using UnityEngine;
-using RPG.Control;
 
 namespace RPG.Combat
 {
     public class WeaponPickup : MonoBehaviour, IRayCastable
     {
-        [SerializeField] Weapon weapon = null;
+        [SerializeField] WeaponConfig weapon = null;
         [SerializeField] float respawnTime = 5;
 
         private void OnTriggerEnter(Collider other)
