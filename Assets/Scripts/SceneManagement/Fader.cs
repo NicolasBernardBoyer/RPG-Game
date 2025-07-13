@@ -18,13 +18,17 @@ namespace RPG.SceneManagement
             canvasGroup.alpha = 1;
         }
 
-        public IEnumerator FadeOut(float time)
+        public Coroutine FadeOut(float time)
         {
             return Fade(1, time);
-
         }
 
-        public IEnumerator Fade(float target, float time)
+        public Coroutine FadeIn(float time)
+        {
+            return Fade(0, time);
+        }
+
+        public Coroutine Fade(float target, float time)
         {
             // Cancel running coroutines
             if (currentActiveFade != null)
@@ -33,22 +37,17 @@ namespace RPG.SceneManagement
             }
             // Run fadeout coroutine
             currentActiveFade = StartCoroutine(FadeRoutine(target, time));
-            yield return currentActiveFade;
+            return currentActiveFade;
         }
         
         private IEnumerator FadeRoutine(float target, float time)
         {
-            while (Mathf.Approximately(canvasGroup.alpha, target)) 
+            while (!Mathf.Approximately(canvasGroup.alpha, target)) 
             {
                 // moving alpha toward 1
-                canvasGroup.alpha += Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime / time);
+                canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime / time);
                 yield return null;
             }
-        }
-
-        public IEnumerator FadeIn(float time)
-        {
-            return Fade(0, time);
         }
     }
 }
