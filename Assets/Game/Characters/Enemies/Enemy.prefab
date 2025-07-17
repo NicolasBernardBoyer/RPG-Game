@@ -88,6 +88,38 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 6739188881394004335}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Control.AiController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -1083661360768430702, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 907096206447270501, guid: 32b16789ee10b004989aaed37a01d294, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -227,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspicionTime: 2
+  aggroCooldownTime: 3
   waypointTime: 3
   patrolPath: {fileID: 0}
   waypointTolerance: 1
@@ -283,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   maxSpeed: 5
+  maxNavPathLength: 40
 --- !u!114 &4245024783830937357
 MonoBehaviour:
   m_ObjectHideFlags: 0

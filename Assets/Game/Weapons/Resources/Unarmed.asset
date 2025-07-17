@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Unarmed
   m_EditorClassIdentifier: 
   animatorOverride: {fileID: 0}
-  weaponPrefab: {fileID: 0}
+  equippedPrefab: {fileID: -3329490754372895670, guid: 43d2b2e490d0bfd44afda07498dddaf1, type: 3}
   weaponDamage: 5
+  weaponPercentageBonus: 0
   weaponRange: 2
+  isRightHanded: 1
+  projectile: {fileID: 0}

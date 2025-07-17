@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3827465513036532612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8654203032656467061}
+  - component: {fileID: 5174773029989733704}
+  m_Layer: 0
+  m_Name: Mic Boom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8654203032656467061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3827465513036532612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 9.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3283385978195649608}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &5174773029989733704
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3827465513036532612}
+  m_Enabled: 1
 --- !u!1 &6952325920749998318
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +50,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3283385978195649608}
   - component: {fileID: 1648899806576361393}
-  - component: {fileID: 7204221663840737980}
   - component: {fileID: 148615054404028253}
   - component: {fileID: 8142894068851185893}
   m_Layer: 0
@@ -32,7 +71,8 @@ Transform:
   m_LocalPosition: {x: -74.682434, y: 26.694607, z: 8.41469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8654203032656467061}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 34.411, y: 0, z: 0}
 --- !u!20 &1648899806576361393
@@ -86,14 +126,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7204221663840737980
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6952325920749998318}
-  m_Enabled: 1
 --- !u!114 &148615054404028253
 MonoBehaviour:
   m_ObjectHideFlags: 0
