@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using RPG.Saving;
 using System.Collections;
+using GameDevTV.Saving;
 
 namespace RPG.SceneManagement
 {
@@ -18,7 +19,7 @@ namespace RPG.SceneManagement
 
         private IEnumerator LoadLastScene()
         {
-            yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
+            yield return GetComponent<JsonSavingSystem>().LoadLastScene(defaultSaveFile);
             Fader fader = FindFirstObjectByType<Fader>();
             fader.FadeOutImmediate();
             yield return fader.FadeIn(fadeInTime);
@@ -42,17 +43,17 @@ namespace RPG.SceneManagement
 
         public void Save()
         {
-            GetComponent<SavingSystem>().Save(defaultSaveFile);
+            GetComponent<JsonSavingSystem>().Save(defaultSaveFile);
         }
 
         public void Load()
         {
-            GetComponent<SavingSystem>().Load(defaultSaveFile);
+            GetComponent<JsonSavingSystem>().Load(defaultSaveFile);
         }
 
         public void Delete()
         {
-            GetComponent<SavingSystem>().Delete(defaultSaveFile);
+            GetComponent<JsonSavingSystem>().Delete(defaultSaveFile);
         }
     }
 }
